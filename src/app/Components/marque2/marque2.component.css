@@ -1,0 +1,41 @@
+*{
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.container1{
+  height:180px;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.marque{
+  width:130px;
+  height:120px;
+  border: solid 1px grey;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+img{
+  width:80px;
+}
+.marque:hover{
+  border-color: blue;
+}
+@media screen and (max-width:480px) {
+.container1{
+  height: fit-content;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+.marque{
+}
+}

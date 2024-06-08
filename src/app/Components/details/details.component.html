@@ -1,0 +1,137 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Acceuil</a></li>
+        <li class="breadcrumb-item"><a href="#">Achat Voitures
+        </a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{unique.TitreAnnonce}}</li>
+      </ol>
+    </nav>
+    <div class="partie1">
+  <div class="partie11">
+    <img src="../../../assets/annonce/annonce1.jpg" alt="Erreur">
+  </div>
+  <div class="partie12">
+  <div class="container3">
+    <img src="../../../assets/menu_autre/autre3.jpg" alt="Erreur">
+    <h6>{{user1.NomPrenom}}</h6>
+    <p>Annonce(s) en ligne : 5</p>
+    <button class="btn1"><i class="fa-solid fa-phone"></i>Telephone</button>
+    <button class="btn2"><i class="fa-solid fa-message"></i>Message</button>
+    <button  *ngIf="logged==='true'"   routerLink="/account/liste_experts/{{unique._id}}" class="btn2" style="background-color: brown;"><i class="fa-solid fa-user"></i>Avoir un Expert</button>
+  </div>
+  </div>
+    </div>
+    <hr>
+    <h2 id="id1">{{unique.TitreAnnonce}}</h2>
+    <h3 id="id2">{{unique.Prix}}TND (Négociable)</h3>
+    <h4 id="id3"><span><i class="fa-solid fa-tag"></i>Voitures</span>
+      <span><i class="fa-solid fa-location-dot"></i>{{unique.Region}}</span></h4>
+      <h6 id="id6">Description :</h6>
+      <p id="id5">{{unique.Description}}</p>
+      <h6 id="id9">Caractéristiques :</h6>
+      <div class="Caracteristiques">
+        <div class="contenu">
+          <p class="generale">Marque :</p>
+          <p class="res">{{unique.Marque}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Modèle :</p>
+          <p class="res">{{unique.Modele}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Année :</p>
+          <p class="res">{{unique.MiseCirculation}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Puissance fiscale:</p>
+          <p class="res">{{unique.PuissanceFiscale}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Kilométrage :</p>
+          <p class="res">{{unique.kilometrage}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Boîte de vitesses :</p>
+          <p class="res">{{unique.BoiteVitesse}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Carburant :</p>
+          <p class="res">{{unique.Typecarburant}}</p>
+        </div>
+        <div class="contenu">
+          <p class="generale">Nombre de portes :</p>
+          <p class="res">{{unique.NombrePortes}}</p>
+        </div>
+      </div>
+      <h6 id="id8">Équipements:</h6>
+      <div class="Equipements" >
+        <div class="paquet" *ngIf="unique?.JantesAluminium==true">
+          <img src="../../../assets/Equipements/jauntes.png" alt="Erreur">
+          <p>Jantes aluminium</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.ABS==true">
+          <img src="../../../assets/Equipements/ABS.png" alt="Erreur">
+          <p>ABS</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.['DirectionAssistée']==true">
+          <img src="../../../assets/Equipements/assistee.png" alt="Erreur">
+          <p>Direction assistée</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.Climatisation==true">
+          <img src="../../../assets/Equipements/climatiseur.png" alt="Erreur">
+          <p>Climatisation</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.ESP==true">
+          <img src="../../../assets/Equipements/esp.png" alt="Erreur">
+          <p>ESP</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.VitresElectriques==true">
+          <img src="../../../assets/Equipements/windows.png" alt="Erreur">
+          <p>Vitres électriques</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.['SystèmeDeNavigation']==true">
+          <img src="../../../assets/Equipements/gps.png" alt="Erreur">
+          <p>Système de navigation</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.FemtureCentrale==true">
+          <img src="../../../assets/Equipements/Femture.png" alt="Erreur">
+          <p>Femture centrale</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.Airbags==true">
+          <img src="../../../assets/Equipements/Airbag.png" alt="Erreur">
+          <p>Airbags</p>
+        </div>
+        <div class="paquet"*ngIf="unique?.MP3Bluetooth==true">
+          <img src="../../../assets/Equipements/bluetooth.png" alt="Erreur">
+          <p>MP3 Bluetooth</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.RadarDeRecul==true">
+          <img src="../../../assets/Equipements/parking.png" alt="Erreur">
+          <p>Radar De Recul</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.Antipatinage==true">
+          <img src="../../../assets/Equipements/antipatinage.png" alt="Erreur">
+          <p>Antipatinage</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.LimiteurDeVitesse==true">
+          <img src="../../../assets/Equipements/regulateur-de-vitesse.png" alt="Erreur">
+          <p>Limiteur De Vitesse</p>
+        </div>
+        <div class="paquet"*ngIf="unique?.ToitOuvrant==true">
+          <img src="../../../assets/Equipements/toit-ouvrant.png" alt="Erreur">
+          <p>Toit ouvrant</p>
+        </div>
+        <div class="paquet" *ngIf="unique?.['RégulateurDeVitesse']==true">
+          <img src="../../../assets/Equipements/regulateur_de_vitesse.png" alt="Erreur">
+          <p>Régulateur de vitesse</p>
+        </div>
+      </div>
+      <p id="id4">Baniola.tn n'est pas responsable des produits proposés dans les annonces.</p>
+    <h1 id="id7">Annonces Similaires</h1>
+  </div>
+  <app-menu-voiture></app-menu-voiture>
+</body>
+<app-footer2></app-footer2>

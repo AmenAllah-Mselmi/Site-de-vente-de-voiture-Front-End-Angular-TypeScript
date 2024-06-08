@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container1">
+  <div class="card1" *ngFor="let item of menu">
+    <div class="partie1">
+      <img src="../../../assets/expert/be_the_expert.png" alt="Erreur">
+    </div>
+    <div class="partie2">
+      <div class="email">
+        <h3>Email:</h3>
+        <p>{{item.email}}</p>
+      </div>
+      <div class="permis">
+        <h3>Type de Permis:</h3>
+        <p>{{item.permis}}</p>
+      </div>
+      <div class="lettre">
+        <h3>Lettre de Motivation:</h3>
+        <p>{{item.lettre_de_motivation}}</p>
+      </div>
+      <div class="nb_voirure">
+        <h3>Nombre de Voitures vendus:</h3>
+        <p>{{item.Nb_Voiture_vendus}}</p>
+      </div>
+      <div class="formation">
+        <h3>Formation:</h3>
+        <p>{{item.Formation}}</p>
+      </div>
+      <div class="bouttons">
+        <button type="button" class="btn btn-success"  (click)="valider(item._id,item.email)" >Valider</button>
+        <button type="button" class="btn btn-danger" (click)="refuser(item._id,item.email)"  >Refuser</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer1></app-footer1>
+<app-footer2></app-footer2>

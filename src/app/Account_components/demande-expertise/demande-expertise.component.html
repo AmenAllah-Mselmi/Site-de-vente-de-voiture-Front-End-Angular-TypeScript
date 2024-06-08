@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">NomPrenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Region</th>
+        <th scope="col">Annonce</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of menu" >
+          <th scope="row">{{item.NomPrenom}}</th>
+          <td>{{item.email}}</td>
+          <td>{{item.Region}}</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button"   class="btn btn-success" routerLink="/details/{{item.idannonce}}">View</button>
+                <button type="button"   class="btn btn-danger"  (click)="sendEmail(item.email)">Send_Email</button>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+.container
+{
+  margin-top:80px ;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: 10px;
+}
+.card span {
+  font-weight: bolder;
+  color: rgb(80, 80, 234);
+}

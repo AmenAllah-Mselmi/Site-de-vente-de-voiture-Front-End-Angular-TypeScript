@@ -1,0 +1,21 @@
+
+.container1{
+  display: flex;
+}
+.partie2
+{
+  background-color: blue;
+}
+table{
+  margin-top: 80px;
+}
+#cont{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cont button
+{
+  width:100px;
+}

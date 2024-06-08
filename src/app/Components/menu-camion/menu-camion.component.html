@@ -1,0 +1,13 @@
+<div class="container1">
+  <div class="cart" *ngFor="let item of menu" routerLink="/details_camion/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_camion/camion1.jpg" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+      <span><i class="fa-solid fa-tag"></i>Camions</span>
+      <span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+<app-search ></app-search>
+<app-rechercher ></app-rechercher>
+<h2>({{this.length }}) Annonces dans la région de {{this.region}} de la Recherche Personelle </h2>
+<div class="container1">
+<ng-container  *ngIf="this.option==1">
+  <div class="cart" *ngFor="let item of menu1"  routerLink="/details/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_voiture/v6.jpg" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+<span><i class="fa-solid fa-tag"></i>Voitures</span>
+<span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</ng-container>
+<ng-container  *ngIf="this.option==2">
+  <div class="cart" *ngFor="let item of menu2" routerLink="/details_moto/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_moto/moto3.jpg" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+<span><i class="fa-solid fa-tag"></i>Motos</span>
+<span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</ng-container>
+<ng-container  *ngIf="this.option==3">
+  <div class="cart" *ngFor="let item of menu5" routerLink="/details_acc/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_acc/acc5.jpg" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+<span><i class="fa-solid fa-tag"></i>Accessoires</span>
+<span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</ng-container>
+<ng-container  *ngIf="this.option==4">
+  <div class="cart" *ngFor="let item of menu4" routerLink="/details_location/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_location/l7.jpeg" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+<span><i class="fa-solid fa-tag"></i>Locations</span>
+<span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</ng-container>
+<ng-container  *ngIf="this.option==5">
+  <div class="cart" *ngFor="let item of menu3" routerLink="/details_camion/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_camion/camion1.jpg" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+<span><i class="fa-solid fa-tag"></i>Camions</span>
+<span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</ng-container>
+<ng-container  *ngIf="this.option==6">
+  <div class="cart" *ngFor="let item of menu6" routerLink="/details_autre/{{item._id}}">
+    <div class="part1">
+      <img src="../../../assets/menu_autre/autre9.png" alt="Erreur">
+      <p id="prix">{{item.Prix}} TND</p>
+    </div>
+    <p>{{item.TitreAnnonce}}</p>
+    <div class="part2">
+<span><i class="fa-solid fa-tag"></i>Autres</span>
+<span><i class="fa-solid fa-location-dot"></i>{{item.Region}}</span>
+    </div>
+  </div>
+</ng-container>
+  </div>

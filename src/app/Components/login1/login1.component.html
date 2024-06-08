@@ -1,0 +1,25 @@
+<body>
+  <form method="post" #f="ngForm" (ngSubmit)="submit(f)" class="container1">
+    <h3>Connexion</h3>
+    <div class="login1">
+      <label for="">Email</label>
+      <input type="email" name="Email"  placeholder="Email*" ngModel>
+    </div>
+    <div class="login1">
+      <label for="">Mot de passe</label>
+      <input type="password" name="Password"  placeholder="Mot de passe*" ngModel>
+      <a href="#">Mot de passe oublié ?</a>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="remember" name="remember">
+      <label for="remember">Se souvenir de moi :</label>
+    </div>
+    <button>
+      Connexion
+    </button>
+  <div class="end">
+    <hr>
+    <p>Pas encore membre ?<a routerLink="/login2">Créer un compte</a></p>
+  </div>
+  </form>
+</body>

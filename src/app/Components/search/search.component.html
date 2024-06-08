@@ -1,0 +1,43 @@
+<form method="post" class="container1" >
+  <select id="choix1" name="choix" ngModel [(ngModel)]="option">
+    <option value="" disabled selected>Choisissez une catégorie</option>
+    <option value="1">Voitures</option>
+    <option value="2">Motos</option>
+    <option value="3">Accessoires</option>
+    <option value="4">Location Voitures</option>
+    <option value="5">Camions</option>
+    <option value="6">Autres Véhicules</option>
+  </select>
+  <select id="regions" name="regions" [(ngModel)]="region" ngModel>
+    <option value="" disabled selected>Tout la Tunisie</option>
+    <option value="Ariana">Ariana</option>
+    <option value="Beja">Béja</option>
+    <option value="Ben Arous">Ben Arous</option>
+    <option value="Bizerte">Bizerte</option>
+    <option value="Gabes">Gabès</option>
+    <option value="Gafsa">Gafsa</option>
+    <option value="Jendouba">Jendouba</option>
+    <option value="Kairouan">Kairouan</option>
+    <option value="Kasserine">Kasserine</option>
+    <option value="Kebili">Kébili</option>
+    <option value="Kef">Le Kef</option>
+    <option value="Mahdia">Mahdia</option>
+    <option value="Manouba">La Manouba</option>
+    <option value="Medenine">Médenine</option>
+    <option value="Monastir">Monastir</option>
+    <option value="Nabeul">Nabeul</option>
+    <option value="Sfax">Sfax</option>
+    <option value="Sidi Bouzid">Sidi Bouzid</option>
+    <option value="Siliana">Siliana</option>
+    <option value="Sousse">Sousse</option>
+    <option value="Tataouine">Tataouine</option>
+    <option value="Tozeur">Tozeur</option>
+    <option value="Tunis">Tunis</option>
+    <option value="Zaghouan">Zaghouan</option>
+  </select>
+  <input type="text" placeholder="Que Cherchez-Vous" name="text1" ngModel [(ngModel)]="text">
+  <div class="button" (click)="submit()">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <button type="submit"  >Rechercher</button>
+  </div>
+</form>

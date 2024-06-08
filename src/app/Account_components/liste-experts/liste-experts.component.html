@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="card" style="width: 18rem;" *ngFor="let item of menu">
+    <img src="../../../assets/expert/be_the_expert.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.NomPrenom}}</h5>
+      <p class="card-text"><span>{{item.NomPrenom}}</span>, spécialiste des voitures de la région de <span>{{item.Region}}</span> , est une référence incontestée dans son domaine.</p>
+      <a  class="btn btn-primary" (click)="submit(item._id)">choose</a>
+    </div>
+  </div>
+</div>
+<app-footer1></app-footer1>
+<app-footer2></app-footer2>

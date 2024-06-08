@@ -1,0 +1,62 @@
+<!-- nav when not connected -->
+<nav *ngIf="this.isconnected===null" class="navbar navbar-expand-lg bg-primary fixed-top z-index:999 " >
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/"><img src="../../../assets/voirplus/logo.png" alt="Erreur"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/about" style="color: white; font-family: 'Times New Roman', Times, serif;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" style="color: white;">Se Connecter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/annonce" style="color: white;">Publier Annonce</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" method="post" >
+        <input class="form-control me-2"   name="search" placeholder="Search for anything" aria-label="Search1" ngModel [(ngModel)]="text">
+        <button class="btn btn-outline-success" type="submit" (click)="search()" routerLink="/search/{{this.text}}" >Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- nav when connected -->
+<nav  *ngIf="this.isconnected==='true'"  [ngClass]="{'orange':isAdmin,'purple':isExpert,'primary':isUser}" class="navbar navbar-expand-lg  fixed-top z-index:999 " >
+  <div class="container-fluid" >
+    <a class="navbar-brand" routerLink="/account/home"><img src="../../../assets/voirplus/logo.png" alt="Erreur"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/account/about" style="color: white; font-family: 'Times New Roman', Times, serif;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/annonce" style="color: white;">Publier Annonce</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account/dashboard/{{this.email}}" style="color: white;">Dashboard</a>
+        </li>
+        <li class="nav-item" *ngIf="Role==='Admin'">
+          <a class="nav-link" routerLink="/account/allusers" style="color: white;">All users</a>
+        </li>
+        <li class="nav-item" *ngIf="Role==='User'">
+          <a class="nav-link" routerLink="/account/demandeExpert" style="color: white;">Demande_Expert</a>
+        </li>
+        <li class="nav-item" *ngIf="Role==='Admin'">
+          <a class="nav-link" routerLink="/account/Ensemble_Demandes" style="color: white;">Ensemble_Demandes</a>
+        </li>
+        <li class="nav-item" *ngIf="Role==='Admin' || Role==='Expert'">
+          <a class="nav-link" routerLink="/account/Demande_Expertise" style="color: white;">Demande_Expertise</a>
+        </li>
+      </ul>
+      <h1>Hello {{name}}</h1>
+      <button class="btn btn-success" id="btn" type="button" (click)="submit()">Log Out</button>
+    </div>
+  </div>
+</nav>

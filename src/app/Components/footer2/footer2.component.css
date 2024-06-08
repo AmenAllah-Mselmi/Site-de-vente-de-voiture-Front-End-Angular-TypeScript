@@ -1,0 +1,17 @@
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:whitesmoke;
+  background-color: darkblue;
+  height:40px;
+}
+div p{
+
+}

@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<form class="container" method="post"  #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="mb-3">
+    <label class="form-label">Type de Permis</label>
+    <select name="permis" class="form-select" aria-label="Disabled select example"  ngModel [(ngModel)]="this.objet.permis">
+      <option selected disabled>Selectionner un type de permis</option>
+      <option value="A">Permis de conduire de type A</option>
+      <option value="B">Permis de conduire de type B</option>
+      <option value="C">Permis de conduire de type C</option>
+      <option value="D">Permis de conduire de type D</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Lettre de Motivation</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="lettre_de_motivation" ngModel [(ngModel)]="this.objet.lettre_de_motivation"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Nombre de voitures vendus</label>
+    <input type="number" name="Nb_Voiture_vendus" class="form-control" id="exampleFormControlInput1" ngModel  [(ngModel)]="this.objet.Nb_Voiture_vendus">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Formation</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Formation" ngModel [(ngModel)]="this.objet.Formation"></textarea>
+  </div>
+  <button type="submit" class="btn btn-outline-primary">Send</button>
+</form>
+<app-footer1></app-footer1>
+<app-footer2></app-footer2>

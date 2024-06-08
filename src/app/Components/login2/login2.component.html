@@ -1,0 +1,61 @@
+<body>
+  <form method="post" class="container1"  #f="ngForm" (ngSubmit)="submit(f)">
+    <h3>Créer un compte</h3>
+    <div class="login1">
+      <label for="">Nom et Prénom :<span>*</span> </label>
+      <input type="text" name="NomPrenom"  placeholder="Nom et Prénom*" required  ngModel>
+    </div>
+    <div class="login1">
+      <label for="">Region:<span>*</span></label>
+      <select  name="Region" ngModel>
+        <option value="" disabled selected>Region...</option>
+        <option value="Ariana">Ariana</option>
+        <option value="Beja">Béja</option>
+        <option value="Ben Arous">Ben Arous</option>
+        <option value="Bizerte">Bizerte</option>
+        <option value="Gabes">Gabès</option>
+        <option value="Gafsa">Gafsa</option>
+        <option value="Jendouba">Jendouba</option>
+        <option value="Kairouan">Kairouan</option>
+        <option value="Kasserine">Kasserine</option>
+        <option value="Kebili">Kébili</option>
+        <option value="Kef">Le Kef</option>
+        <option value="Mahdia">Mahdia</option>
+        <option value="Manouba">La Manouba</option>
+        <option value="Medenine">Médenine</option>
+        <option value="Monastir">Monastir</option>
+        <option value="Nabeul">Nabeul</option>
+        <option value="Sfax">Sfax</option>
+        <option value="Sidi Bouzid">Sidi Bouzid</option>
+        <option value="Siliana">Siliana</option>
+        <option value="Sousse">Sousse</option>
+        <option value="Tataouine">Tataouine</option>
+        <option value="Tozeur">Tozeur</option>
+        <option value="Tunis">Tunis</option>
+        <option value="Zaghouan">Zaghouan</option>
+      </select>
+    </div>
+    <div class="login1">
+      <label for="">Email:<span>*</span></label>
+      <input type="email" name="Email"  placeholder="Email*" required ngModel>
+    </div>
+    <div class="login">
+      <div class="login1">
+        <label for="">Mot de passe<span>*</span></label>
+      <input type="password" name="Password"  placeholder="Mot de passe*" required [(ngModel)]="pass1">
+      </div>
+      <div class="login1">
+        <label for=""> Vérifier mot de passe<span>*</span></label>
+      <input type="password" name="pass2"  placeholder="Confirme le mot de passe*" required [(ngModel)]="pass2">
+      </div>
+    </div>
+    <button type="submit">
+      Créer mon compte
+    </button>
+  <div class="end">
+    <hr>
+    <p>Vous avez déjà un compte ?<a routerLink="/login">Se connecter</a></p>
+  </div>
+  </form>
+</body>
+

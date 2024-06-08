@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Acceuil</a></li>
+        <li class="breadcrumb-item"><a href="#">Achat Accessoiress
+        </a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{unique.TitreAnnonce}}</li>
+      </ol>
+    </nav>
+    <div class="partie1">
+  <div class="partie11">
+    <img src="../../../assets/menu_acc/acc7.jpg" alt="Erreur">
+  </div>
+  <div class="partie12">
+  <div class="container3">
+    <img src="../../../assets/menu_autre/autre3.jpg" alt="Erreur">
+    <h6>{{user1.NomPrenom}}</h6>
+    <p>Annonce(s) en ligne : 5</p>
+    <button class="btn1"><i class="fa-solid fa-phone"></i>Telephone</button>
+    <button class="btn2"><i class="fa-solid fa-message"></i>Message</button>
+  </div>
+  </div>
+    </div>
+    <hr>
+    <h2 id="id1">{{unique.TitreAnnonce}}</h2>
+    <h3 id="id2">{{unique.Prix}}TND (Négociable)</h3>
+    <h4 id="id3"><span><i class="fa-solid fa-tag"></i>Voitures</span>
+      <span><i class="fa-solid fa-location-dot"></i>{{unique.Region}}</span></h4>
+      <h6 id="id6">Description :</h6>
+      <p id="id5">{{unique.Description}}</p>
+      <h6 id="id9">Caractéristiques :</h6>
+      <p id="id4">Baniola.tn n'est pas responsable des produits proposés dans les annonces.</p>
+    <h1 id="id7">Annonces Similaires</h1>
+  </div>
+  <app-menu-acc></app-menu-acc>
+</body>
+<app-footer2></app-footer2>
+
